@@ -104,6 +104,18 @@ export const coreDashboardDefinitions: DashboardConfig[] = [
     },
     widgets: [
       {
+        name: "VitalsOverview",
+        extensionSlotName: "vitals-widget",
+        layout: { columnSpan: 2 },
+        basePath: "results/vitals"
+      },
+      {
+        name: "HeightAndWeightOverview",
+        extensionSlotName: "biometrics-widget",
+        layout: { columnSpan: 2 },
+        basePath: "results/heightAndWeight"
+      },
+      {
         name: "ConditionsOverview",
         esModule: "@openmrs/esm-patient-chart-widgets",
         layout: { columnSpan: 2 },
@@ -132,18 +144,6 @@ export const coreDashboardDefinitions: DashboardConfig[] = [
         esModule: "@openmrs/esm-patient-chart-widgets",
         layout: { columnSpan: 4 },
         basePath: "encounters/notes"
-      },
-      {
-        name: "VitalsOverview",
-        extensionSlotName: "vitals-widget",
-        layout: { columnSpan: 2 },
-        basePath: "results/vitals"
-      },
-      {
-        name: "HeightAndWeightOverview",
-        extensionSlotName: "biometrics-widget",
-        layout: { columnSpan: 2 },
-        basePath: "results/heightAndWeight"
       },
       {
         name: "MedicationsOverview",
